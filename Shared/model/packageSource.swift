@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PackageSource : Codable {
+struct PackageSource : Codable,Hashable {
     let package_anim : String
     let name_anim : String
     let rating : String
