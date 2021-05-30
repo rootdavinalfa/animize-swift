@@ -14,7 +14,6 @@ class networkCaller{
             (data,_,_) in
             //print(data)
             let dats = try! JSONDecoder().decode(T.self, from:data!)
-            print(dats)
             DispatchQueue.main.async {
                 completion(dats)
             }

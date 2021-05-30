@@ -40,33 +40,50 @@ struct AnimePackage: View {
                 }else{
                     EmptyView()
                 }
-            }
-            
-            )
+            })
     }
 }
 
 struct PackageView: View {
-    @State var datas : [PackageSource] = []
+    @ObservedObject var packageViewModel = AnimpackageViewModel()
     
+    @State var page : Int = 1
+    @State var position : Int = 1
     var body: some View {
-        ScrollView{
-            LazyVGrid(columns: [GridItem(.flexible(minimum:50)),
-                                GridItem(.flexible(minimum:50))],
-                      spacing:20){
-                ForEach(datas,id:\.self){
-                    dat in
-                    AnimePackage(data: dat)
-                        .padding(.horizontal)
+        ScrollViewReader{
+            proxy in
+            ScrollView{
+                LazyVGrid(columns: [GridItem(.flexible(minimum:50)),
+                                    GridItem(.flexible(minimum:50))],
+                          spacing:20){
+                    ForEach(packageViewModel.datas,id:\.self){
+                        dat in
+                        AnimePackage(data: dat)
+                            .padding(.horizontal)
+                            .onAppear{
+                                if self.shouldLoadNextPage(currentItem: dat){
+                                    page += 1
+                                    packageViewModel.getItem(page: page)
+                                }
+                            }
+                    }
                 }
+                
             }
             .onAppear{
-                networkCaller().getData(url:"https://api.dvnlabs.xyz/animize/anim/list/package/page/1", completion:{
-                    (data :ResponseAnim ) in datas = data.anim
-                })
+                packageViewModel.getItem(page: page)
             }
+            
         }
     }
+    private func shouldLoadNextPage(currentItem item: PackageSource) -> Bool {
+        let currentIndex = packageViewModel.datas.firstIndex { PackageSource in
+            PackageSource.id == item.id
+        }
+            let lastIndex = packageViewModel.datas.count - 1
+            let offset = 8 //Load next page when 5 from bottom, adjust to meet needs
+            return currentIndex == lastIndex - offset
+        }
 }
 
 struct PackageView_Previews: PreviewProvider {

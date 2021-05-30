@@ -15,6 +15,8 @@
 		772C19F4263D951A006FFB8F /* PackageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772C19C9263D9518006FFB8F /* PackageView.swift */; };
 		772C19F5263D951A006FFB8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772C19CA263D9519006FFB8F /* Assets.xcassets */; };
 		772C19F6263D951A006FFB8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772C19CA263D9519006FFB8F /* Assets.xcassets */; };
+		7733357D2663DBDB005416D6 /* AnimpackageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7733357C2663DBDB005416D6 /* AnimpackageViewModel.swift */; };
+		7733357E2663DBDB005416D6 /* AnimpackageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7733357C2663DBDB005416D6 /* AnimpackageViewModel.swift */; };
 		77FC8671263DA5DC007C528A /* packageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC8670263DA5DC007C528A /* packageSource.swift */; };
 		77FC8672263DA5DC007C528A /* packageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC8670263DA5DC007C528A /* packageSource.swift */; };
 		77FC867D263DA6C5007C528A /* networkCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC867C263DA6C5007C528A /* networkCaller.swift */; };
@@ -60,6 +62,7 @@
 		772C19EA263D951A006FFB8F /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		772C19EE263D951A006FFB8F /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		772C19F0263D951A006FFB8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7733357C2663DBDB005416D6 /* AnimpackageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimpackageViewModel.swift; sourceTree = "<group>"; };
 		77FC8670263DA5DC007C528A /* packageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageSource.swift; sourceTree = "<group>"; };
 		77FC867C263DA6C5007C528A /* networkCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkCaller.swift; sourceTree = "<group>"; };
 		77FCFBD7263EB9AC00EFECA2 /* responseAnimPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = responseAnimPackage.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 		772C19C7263D9518006FFB8F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7733357B2663DBBA005416D6 /* viewmodel */,
 				77FCFBE3263EC72400EFECA2 /* ui */,
 				77FC867B263DA6B8007C528A /* util */,
 				77FC866F263DA599007C528A /* model */,
@@ -170,6 +174,14 @@
 				772C19F0263D951A006FFB8F /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		7733357B2663DBBA005416D6 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				7733357C2663DBDB005416D6 /* AnimpackageViewModel.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 		77FC866F263DA599007C528A /* model */ = {
@@ -364,6 +376,7 @@
 			files = (
 				772C19F3263D951A006FFB8F /* PackageView.swift in Sources */,
 				77FCFBFB263ECFE000EFECA2 /* MainView.swift in Sources */,
+				7733357D2663DBDB005416D6 /* AnimpackageViewModel.swift in Sources */,
 				772C19F1263D951A006FFB8F /* animizeApp.swift in Sources */,
 				77FC8671263DA5DC007C528A /* packageSource.swift in Sources */,
 				77FCFC06263EDBF400EFECA2 /* DiscoverView.swift in Sources */,
@@ -378,6 +391,7 @@
 			files = (
 				772C19F4263D951A006FFB8F /* PackageView.swift in Sources */,
 				77FCFBFC263ECFE000EFECA2 /* MainView.swift in Sources */,
+				7733357E2663DBDB005416D6 /* AnimpackageViewModel.swift in Sources */,
 				772C19F2263D951A006FFB8F /* animizeApp.swift in Sources */,
 				77FC8672263DA5DC007C528A /* packageSource.swift in Sources */,
 				77FCFC07263EDBF400EFECA2 /* DiscoverView.swift in Sources */,

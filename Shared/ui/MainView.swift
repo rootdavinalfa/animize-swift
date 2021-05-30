@@ -21,36 +21,62 @@ struct NavViewItem : View {
 
 struct MainView: View {
     @State private var selection: String? = nil
+    @State private var searchText = ""
     
     var body: some View {
-        
         NavigationView{
-            ZStack {
-                List {
-                    NavigationLink(destination: DiscoverView(),tag:"Discover",selection:$selection)
-                    {
-                        NavViewItem(text: "Discover")
-                    }
-                    NavigationLink(destination: PackageView(),tag:"NewPackage",selection:$selection)
-                    {
-                        NavViewItem(text: "New Package")
-                    }
-                    NavigationLink(destination: PackageView(),tag:"NewUp",selection:$selection)
-                    {
-                        NavViewItem(text: "New Upload")
-                    }
-                    NavigationLink(destination: PackageView(),tag:"Genre",selection:$selection)
-                    {
-                        NavViewItem(text: "Genre")
-                    }
+            List {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                    TextField("Search ..", text: $searchText)
+                        .frame(height: 20)
                 }
+                .frame(height:25)
+                .cornerRadius(5)
                 
-                
+                .foregroundColor(.gray)
+                .padding(.vertical, 5)
+                NavigationLink(destination: DiscoverView(),tag:"Discover",selection:$selection)
+                {
+                    Label("Discover",systemImage:"star")
+                        .font(.system(size: 14))
+                        .padding(.vertical, 5)
+                }
+                NavigationLink(destination: PackageView(),tag:"NewPackage",selection:$selection)
+                {
+                    Label("New Package",systemImage:"sun.max")
+                        .font(.system(size: 14))
+                        .padding(.vertical, 5)
+                }
+                NavigationLink(destination: PackageView(),tag:"NewUp",selection:$selection)
+                {
+                    Label("New Upload",systemImage:"moon")
+                        .font(.system(size: 14))
+                        .padding(.vertical, 5)
+                }
+                NavigationLink(destination: PackageView(),tag:"Genre",selection:$selection)
+                {
+                    Label("Discover",systemImage:"play")
+                        .font(.system(size: 14))
+                        .padding(.vertical, 5)
+                }
+            }.listStyle(SidebarListStyle())
+            .onAppear{
+                selection = "Discover"
+            }.toolbar{
+                Button(action: toggleSidebar) {
+                    Image(systemName: "sidebar.left")
+                        .help("Toggle Sidebar")
+                }
             }
-        }.onAppear{
-            selection = "Discover"
         }
+        
     }
+}
+
+private func toggleSidebar() {
+    NSApp.keyWindow?.firstResponder?
+        .tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
 }
 
 struct MainView_Previews: PreviewProvider {
