@@ -17,6 +17,15 @@
 		772C19F6263D951A006FFB8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772C19CA263D9519006FFB8F /* Assets.xcassets */; };
 		7733357D2663DBDB005416D6 /* AnimpackageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7733357C2663DBDB005416D6 /* AnimpackageViewModel.swift */; };
 		7733357E2663DBDB005416D6 /* AnimpackageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7733357C2663DBDB005416D6 /* AnimpackageViewModel.swift */; };
+		77DAC9232699EFA200F2B295 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 77DAC9222699EFA200F2B295 /* Kingfisher */; };
+		77DAC9252699F16800F2B295 /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAC9242699F16800F2B295 /* EpisodeView.swift */; };
+		77DAC9262699F16800F2B295 /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAC9242699F16800F2B295 /* EpisodeView.swift */; };
+		77DAC9282699F1C000F2B295 /* AnimEpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAC9272699F1C000F2B295 /* AnimEpisodeViewModel.swift */; };
+		77DAC9292699F1C000F2B295 /* AnimEpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAC9272699F1C000F2B295 /* AnimEpisodeViewModel.swift */; };
+		77DAC92B2699F25600F2B295 /* responseAnimEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAC92A2699F25600F2B295 /* responseAnimEpisode.swift */; };
+		77DAC92C2699F25600F2B295 /* responseAnimEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAC92A2699F25600F2B295 /* responseAnimEpisode.swift */; };
+		77DAC92E2699F26100F2B295 /* animEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAC92D2699F26100F2B295 /* animEpisode.swift */; };
+		77DAC92F2699F26100F2B295 /* animEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DAC92D2699F26100F2B295 /* animEpisode.swift */; };
 		77FC8671263DA5DC007C528A /* packageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC8670263DA5DC007C528A /* packageSource.swift */; };
 		77FC8672263DA5DC007C528A /* packageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC8670263DA5DC007C528A /* packageSource.swift */; };
 		77FC867D263DA6C5007C528A /* networkCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FC867C263DA6C5007C528A /* networkCaller.swift */; };
@@ -63,6 +72,10 @@
 		772C19EE263D951A006FFB8F /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		772C19F0263D951A006FFB8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7733357C2663DBDB005416D6 /* AnimpackageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimpackageViewModel.swift; sourceTree = "<group>"; };
+		77DAC9242699F16800F2B295 /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		77DAC9272699F1C000F2B295 /* AnimEpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimEpisodeViewModel.swift; sourceTree = "<group>"; };
+		77DAC92A2699F25600F2B295 /* responseAnimEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = responseAnimEpisode.swift; sourceTree = "<group>"; };
+		77DAC92D2699F26100F2B295 /* animEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animEpisode.swift; sourceTree = "<group>"; };
 		77FC8670263DA5DC007C528A /* packageSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packageSource.swift; sourceTree = "<group>"; };
 		77FC867C263DA6C5007C528A /* networkCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkCaller.swift; sourceTree = "<group>"; };
 		77FCFBD7263EB9AC00EFECA2 /* responseAnimPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = responseAnimPackage.swift; sourceTree = "<group>"; };
@@ -76,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77DAC9232699EFA200F2B295 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +128,7 @@
 				772C19E2263D951A006FFB8F /* Tests iOS */,
 				772C19ED263D951A006FFB8F /* Tests macOS */,
 				772C19D0263D9519006FFB8F /* Products */,
+				77DAC9212699EFA200F2B295 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,8 +195,16 @@
 			isa = PBXGroup;
 			children = (
 				7733357C2663DBDB005416D6 /* AnimpackageViewModel.swift */,
+				77DAC9272699F1C000F2B295 /* AnimEpisodeViewModel.swift */,
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		77DAC9212699EFA200F2B295 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		77FC866F263DA599007C528A /* model */ = {
@@ -189,6 +212,8 @@
 			children = (
 				77FC8670263DA5DC007C528A /* packageSource.swift */,
 				77FCFBD7263EB9AC00EFECA2 /* responseAnimPackage.swift */,
+				77DAC92A2699F25600F2B295 /* responseAnimEpisode.swift */,
+				77DAC92D2699F26100F2B295 /* animEpisode.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -207,6 +232,7 @@
 				772C19C9263D9518006FFB8F /* PackageView.swift */,
 				77FCFBFA263ECFE000EFECA2 /* MainView.swift */,
 				77FCFC05263EDBF400EFECA2 /* DiscoverView.swift */,
+				77DAC9242699F16800F2B295 /* EpisodeView.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -227,6 +253,9 @@
 			dependencies = (
 			);
 			name = "animize (iOS)";
+			packageProductDependencies = (
+				77DAC9222699EFA200F2B295 /* Kingfisher */,
+			);
 			productName = "animize (iOS)";
 			productReference = 772C19CF263D9519006FFB8F /* animize.app */;
 			productType = "com.apple.product-type.application";
@@ -294,7 +323,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					772C19CE263D9519006FFB8F = {
 						CreatedOnToolsVersion = 12.4;
@@ -375,11 +404,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				772C19F3263D951A006FFB8F /* PackageView.swift in Sources */,
+				77DAC9252699F16800F2B295 /* EpisodeView.swift in Sources */,
 				77FCFBFB263ECFE000EFECA2 /* MainView.swift in Sources */,
 				7733357D2663DBDB005416D6 /* AnimpackageViewModel.swift in Sources */,
+				77DAC92B2699F25600F2B295 /* responseAnimEpisode.swift in Sources */,
 				772C19F1263D951A006FFB8F /* animizeApp.swift in Sources */,
+				77DAC92E2699F26100F2B295 /* animEpisode.swift in Sources */,
 				77FC8671263DA5DC007C528A /* packageSource.swift in Sources */,
 				77FCFC06263EDBF400EFECA2 /* DiscoverView.swift in Sources */,
+				77DAC9282699F1C000F2B295 /* AnimEpisodeViewModel.swift in Sources */,
 				77FC867D263DA6C5007C528A /* networkCaller.swift in Sources */,
 				77FCFBD8263EB9AC00EFECA2 /* responseAnimPackage.swift in Sources */,
 			);
@@ -390,11 +423,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				772C19F4263D951A006FFB8F /* PackageView.swift in Sources */,
+				77DAC9262699F16800F2B295 /* EpisodeView.swift in Sources */,
 				77FCFBFC263ECFE000EFECA2 /* MainView.swift in Sources */,
 				7733357E2663DBDB005416D6 /* AnimpackageViewModel.swift in Sources */,
+				77DAC92C2699F25600F2B295 /* responseAnimEpisode.swift in Sources */,
 				772C19F2263D951A006FFB8F /* animizeApp.swift in Sources */,
+				77DAC92F2699F26100F2B295 /* animEpisode.swift in Sources */,
 				77FC8672263DA5DC007C528A /* packageSource.swift in Sources */,
 				77FCFC07263EDBF400EFECA2 /* DiscoverView.swift in Sources */,
+				77DAC9292699F1C000F2B295 /* AnimEpisodeViewModel.swift in Sources */,
 				77FC867E263DA6C5007C528A /* networkCaller.swift in Sources */,
 				77FCFBD9263EB9AC00EFECA2 /* responseAnimPackage.swift in Sources */,
 			);
@@ -598,6 +635,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6PZGSNG5BA;
@@ -622,6 +660,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6PZGSNG5BA;
@@ -791,6 +830,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		77DAC9222699EFA200F2B295 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77FCFBE8263ECBFA00EFECA2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		77FCFBE9263ECBFA00EFECA2 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 77FCFBE8263ECBFA00EFECA2 /* XCRemoteSwiftPackageReference "Kingfisher" */;

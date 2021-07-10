@@ -48,7 +48,7 @@ struct MainView: View {
                         .font(.system(size: 14))
                         .padding(.vertical, 5)
                 }
-                NavigationLink(destination: PackageView(),tag:"NewUp",selection:$selection)
+                NavigationLink(destination: EpisodeView(),tag:"NewUp",selection:$selection)
                 {
                     Label("New Upload",systemImage:"moon")
                         .font(.system(size: 14))

@@ -1,22 +1,21 @@
 //
-//  ContentView.swift
-//  Shared
+//  EpisodeView.swift
+//  animize
 //
-//  Created by davin on 01/05/21.
+//  Created by davin on 10/07/21.
 //
-
 import SwiftUI
 import Kingfisher
 
-struct AnimePackage: View {
+struct AnimeEpisode: View {
     @State private var hovered = false
     
-    let data : PackageSource
+    let data : AnimeEpisodeModel
     var body: some View {
-        KFImage.url(data.cover)
+        KFImage.url(data.thumbnail)
             .setProcessor(
                 RoundCornerImageProcessor(cornerRadius: 10))
-            .setProcessor(ResizingImageProcessor(referenceSize: CGSize(width: 260, height: 360.0)
+            .setProcessor(ResizingImageProcessor(referenceSize: CGSize(width: 360, height: 260.0)
             ))
             .fade(duration: 1)
             .cancelOnDisappear(true)
@@ -44,8 +43,8 @@ struct AnimePackage: View {
     }
 }
 
-struct PackageView: View {
-    @ObservedObject var packageViewModel = AnimpackageViewModel()
+struct EpisodeView: View {
+    @ObservedObject var packageViewModel = AnimEpisodeViewModel()
     
     @State var page : Int = 1
     @State var position : Int = 1
@@ -58,7 +57,7 @@ struct PackageView: View {
                           spacing:20){
                     ForEach(packageViewModel.datas,id:\.self){
                         dat in
-                        AnimePackage(data: dat)
+                        AnimeEpisode(data: dat)
                             .padding(.horizontal)
                             .onAppear{
                                 if self.shouldLoadNextPage(currentItem: dat){
@@ -76,9 +75,9 @@ struct PackageView: View {
             
         }
     }
-    private func shouldLoadNextPage(currentItem item: PackageSource) -> Bool {
-        let currentIndex = packageViewModel.datas.firstIndex { PackageSource in
-            PackageSource.id == item.id
+    private func shouldLoadNextPage(currentItem item: AnimeEpisodeModel) -> Bool {
+        let currentIndex = packageViewModel.datas.firstIndex { AnimeEpisodeModel in
+            AnimeEpisodeModel.id == item.id
         }
             let lastIndex = packageViewModel.datas.count - 1
             let offset = 8 //Load next page when 5 from bottom, adjust to meet needs
@@ -86,8 +85,9 @@ struct PackageView: View {
         }
 }
 
-struct PackageView_Previews: PreviewProvider {
+struct EpisodeView_Previews: PreviewProvider {
     static var previews: some View {
-        PackageView()
+        EpisodeView()
     }
 }
+
